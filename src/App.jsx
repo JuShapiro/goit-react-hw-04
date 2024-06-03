@@ -35,6 +35,7 @@ const App = () => {
         setShowLoadMore(page < total_pages);
       } catch (error) {
         setError(error.message);
+        setIsEmpty(false);
       } finally {
         setIsLoading(false);
       }
@@ -68,7 +69,7 @@ const App = () => {
       {images.length > 0 && (
         <ImageGallery images={images} openModal={openModal} />
       )}
-      {error && <ErrorMessage text={`Something went wrong ${error}`} />}
+      {error && <ErrorMessage text={`Something went wrong... ${error}`} />}
       {isEmpty && <ErrorMessage text="Nothing find with this query" />}
       {showLoadMore && <LoadMoreBtn onClick={handleLoadMore} />}
       {isLoading && <Loader />}
