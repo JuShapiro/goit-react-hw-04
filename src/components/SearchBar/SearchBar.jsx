@@ -29,7 +29,7 @@ const SearchBar = ({ onSubmit }) => {
           <LiaSearchSolid />
         </button>
         <div>
-          <Toaster />
+          <Toaster position="top-right" reverseOrder={false} />
         </div>
       </form>
     </header>

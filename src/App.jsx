@@ -1,12 +1,12 @@
 import "modern-normalize";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
-import { useEffect, useState } from "react";
 import getImages from "./apiService/images";
+import { useEffect, useState } from "react";
+import SearchBar from "./components/SearchBar/SearchBar";
+import Loader from "./components/Loader/Loader";
+import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
-import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
-import Loader from "./components/Loader/Loader";
 import ImageModal from "./components/ImageModal/ImageModal";
 
 const App = () => {
